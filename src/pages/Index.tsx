@@ -24,6 +24,7 @@ export default function Index() {
             <a href="#programs" className="text-sm font-medium hover:text-accent transition-colors">Программы</a>
             <a href="#formats" className="text-sm font-medium hover:text-accent transition-colors">Форматы</a>
             <a href="#benefits" className="text-sm font-medium hover:text-accent transition-colors">Преимущества</a>
+            <a href="#news" className="text-sm font-medium hover:text-accent transition-colors">Новости</a>
             <a href="#faq" className="text-sm font-medium hover:text-accent transition-colors">FAQ</a>
             <a href="#contacts" className="text-sm font-medium hover:text-accent transition-colors">Контакты</a>
           </nav>
@@ -296,7 +297,126 @@ export default function Index() {
         </div>
       </section>
 
-      <section id="faq" className="py-16 px-4 bg-white">
+      <section id="news" className="py-16 px-4 bg-white">
+        <div className="container max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-3">Новости и акции</h2>
+            <p className="text-muted-foreground">Актуальные предложения и важные обновления</p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <Card className="border-2 border-accent/20 hover:border-accent transition-all duration-300 overflow-hidden">
+              <div className="bg-gradient-to-br from-accent to-accent/80 text-white p-6">
+                <Badge className="bg-white/20 text-white border-white/30 mb-3">Акция</Badge>
+                <h3 className="text-2xl font-bold mb-2">Скидка 20%</h3>
+                <p className="text-white/90">на все программы НМО</p>
+              </div>
+              <CardContent className="pt-6">
+                <p className="text-sm text-muted-foreground mb-4">
+                  Специальное предложение для врачей! Успейте записаться на программы непрерывного медицинского образования со скидкой.
+                </p>
+                <div className="flex items-center gap-2 text-sm text-muted-foreground mb-4">
+                  <Icon name="Calendar" size={16} />
+                  <span>До 31 января 2025</span>
+                </div>
+                <Button className="w-full bg-accent hover:bg-accent/90">
+                  Узнать подробнее
+                </Button>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-all duration-300">
+              <CardHeader>
+                <Badge className="w-fit mb-2" variant="secondary">Новость</Badge>
+                <CardTitle className="text-lg">Новые программы для медсестёр</CardTitle>
+                <CardDescription>24 декабря 2024</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground mb-4">
+                  Мы запустили 15 новых программ повышения квалификации для среднего медперсонала по актуальным направлениям.
+                </p>
+                <Button variant="outline" className="w-full">
+                  Смотреть программы
+                  <Icon name="ArrowRight" className="ml-2" size={16} />
+                </Button>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-all duration-300">
+              <CardHeader>
+                <Badge className="w-fit mb-2" variant="secondary">Новость</Badge>
+                <CardTitle className="text-lg">Обновление платформы LMS</CardTitle>
+                <CardDescription>20 декабря 2024</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground mb-4">
+                  Личный кабинет стал ещё удобнее! Новый интерфейс, мобильное приложение и интерактивные тесты.
+                </p>
+                <Button variant="outline" className="w-full">
+                  Подробнее
+                  <Icon name="ArrowRight" className="ml-2" size={16} />
+                </Button>
+              </CardContent>
+            </Card>
+
+            <Card className="border-2 border-green-200 hover:border-green-400 transition-all duration-300">
+              <CardHeader>
+                <Badge className="w-fit mb-2 bg-green-100 text-green-700">Акция</Badge>
+                <CardTitle className="text-lg">Групповое обучение</CardTitle>
+                <CardDescription>Специальное предложение</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground mb-4">
+                  Скидка до 30% при записи от 5 человек! Идеально для клиник и медицинских центров.
+                </p>
+                <Button variant="outline" className="w-full">
+                  Оставить заявку
+                </Button>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-all duration-300">
+              <CardHeader>
+                <Badge className="w-fit mb-2" variant="secondary">Новость</Badge>
+                <CardTitle className="text-lg">Партнёрство с НМО</CardTitle>
+                <CardDescription>15 декабря 2024</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground mb-4">
+                  Наш центр официально аккредитован на портале НМО. Все баллы начисляются автоматически.
+                </p>
+                <Button variant="outline" className="w-full">
+                  Читать новость
+                  <Icon name="ArrowRight" className="ml-2" size={16} />
+                </Button>
+              </CardContent>
+            </Card>
+
+            <Card className="border-2 border-blue-200 hover:border-blue-400 transition-all duration-300">
+              <CardHeader>
+                <Badge className="w-fit mb-2 bg-blue-100 text-blue-700">Вебинар</Badge>
+                <CardTitle className="text-lg">Бесплатный вебинар</CardTitle>
+                <CardDescription>28 декабря в 15:00</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground mb-4">
+                  "Современные подходы в терапии". Приглашаем всех желающих на открытый вебинар с сертификатом.
+                </p>
+                <Button variant="outline" className="w-full">
+                  Зарегистрироваться
+                </Button>
+              </CardContent>
+            </Card>
+          </div>
+          <div className="text-center mt-8">
+            <Button variant="outline" size="lg">
+              <Icon name="Newspaper" className="mr-2" size={20} />
+              Все новости
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      <section id="faq" className="py-16 px-4 bg-secondary/30">
         <div className="container max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-3">Частые вопросы</h2>
