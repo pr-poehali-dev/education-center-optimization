@@ -95,11 +95,43 @@ export default function Index() {
                 </Button>
               </div>
             </div>
-            <div className="hidden md:flex justify-center">
-              <div className="relative w-full max-w-md">
-                <div className="absolute inset-0 bg-accent/20 rounded-full blur-3xl"></div>
-                <Icon name="BookOpen" className="relative w-full h-auto text-white/90" size={300} />
-              </div>
+            <div className="flex justify-center">
+              <Card className="w-full max-w-md bg-white/10 backdrop-blur-sm border-white/20 text-white">
+                <CardHeader>
+                  <CardTitle className="text-white">Быстрая заявка</CardTitle>
+                  <CardDescription className="text-white/80">
+                    Оставьте контакты — перезвоним в течение 15 минут
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <form className="space-y-4">
+                    <div>
+                      <Input 
+                        placeholder="Ваше имя" 
+                        className="bg-white/20 border-white/30 text-white placeholder:text-white/60"
+                      />
+                    </div>
+                    <div>
+                      <Input 
+                        type="tel" 
+                        placeholder="+7 (999) 123-45-67" 
+                        className="bg-white/20 border-white/30 text-white placeholder:text-white/60"
+                      />
+                    </div>
+                    <div>
+                      <Textarea 
+                        placeholder="Что вас интересует? (необязательно)" 
+                        className="bg-white/20 border-white/30 text-white placeholder:text-white/60 resize-none"
+                        rows={3}
+                      />
+                    </div>
+                    <Button type="submit" className="w-full bg-accent hover:bg-accent/90 text-white">
+                      <Icon name="Send" className="mr-2" size={18} />
+                      Отправить заявку
+                    </Button>
+                  </form>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </div>
